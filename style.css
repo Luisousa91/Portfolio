@@ -23,9 +23,10 @@ body {
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
+  
 }
 
-::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar { width: 9px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--green); border-radius: 2px; }
 
@@ -123,11 +124,21 @@ nav .logo { width: 56px; height: 56px; }
   align-items: center;
   gap: 12px;
 }
+.hero-tag span{
+  color: #f0f0f0;
+
+}
 .hero-tag::before {
-  content: '';
+   content: '';
   display: block;
-  width: 32px; height: 1px;
-  background: var(--green);
+  width: 16px; height: 16px;
+  background-color: var(--green);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M4%202h2v20H4V2zm2%202h14v12H6V4zm4%202v3h-2V6h2zm4%200v3h-2V6h2zm4%200v3h-2V6h2zm-8%203v3h-2V9h2zm4%200v3h-2V9h2zm4%200v3h-2V9h2z%27%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M4%202h2v20H4V2zm2%202h14v12H6V4zm4%202v3h-2V6h2zm4%200v3h-2V6h2zm4%200v3h-2V6h2zm-8%203v3h-2V9h2zm4%200v3h-2V9h2zm4%200v3h-2V9h2z%27%2F%3E%3C%2Fsvg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .hero-name {
@@ -138,7 +149,9 @@ nav .logo { width: 56px; height: 56px; }
   margin-bottom: 12px;
   text-shadow: 0 4px 24px rgba(0,0,0,0.8);
 }
-.hero-name span { color: var(--green); }
+.hero-name span {
+   color: var(--green); 
+  }
 
 .hero-title {
   font-size: clamp(17px, 2.5vw, 24px);
@@ -198,11 +211,27 @@ section { padding: 100px 60px; }
   gap: 12px;
 }
 .section-tag::before {
-  content: '';
+   content: '';
   display: block;
-  width: 24px; height: 1px;
-  background: var(--green);
+  width: 18px; height: 18px;
+  background-color: var(--green);
+  -webkit-mask-image: var(--icon);
+  mask-image: var(--icon);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
+
+#about .section-tag      { --icon: url("img/formula-1-car-facing-right-svgrepo-com.svg"); }
+#skills .section-tag      { --icon: url("img/react-16-svgrepo-com.svg"); }
+#experience .section-tag  { --icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M9%204a2%202%200%2000-2%202v1H4a2%202%200%2000-2%202v9a2%202%200%20002%202h16a2%202%200%20002-2V9a2%202%200%2000-2-2h-3V6a2%202%200%2000-2-2H9zm0%202h6v1H9V6zM2%2011h20v2H2v-2z%27%2F%3E%3C%2Fsvg%3E"); }
+#projets .section-tag     { --icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M3%205a2%202%200%20012-2h4l2%202h8a2%202%200%20012%202v10a2%202%200%2001-2%202H5a2%202%200%2001-2-2V5z%27%2F%3E%3C%2Fsvg%3E"); }
+#formation .section-tag   { --icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M12%202L1%207l11%205%209-4.1V17h2V7L12%202zM5%2013.2V17c0%202%203%204%207%204s7-2%207-4v-3.8l-7%203.2-7-3.2z%27%2F%3E%3C%2Fsvg%3E"); }
+#contact .section-tag     { --icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M3%205a2%202%200%2000-2%202v10a2%202%200%20002%202h18a2%202%200%20002-2V7a2%202%200%2000-2-2H3zm0%202.2L12%2013l9-5.8V7l-9%206-9-6v.2z%27%2F%3E%3C%2Fsvg%3E"); }
+
 
 .section-title {
   font-size: clamp(26px, 4vw, 42px);
