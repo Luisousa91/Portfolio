@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/LGD Logo (1).png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Projet E5 — Analyse de données F1 avec FastF1 | Portfolio Luis</title>
+  <meta name="description" content="Projet scolaire E5 : analyse de données de Formule 1 avec la bibliothèque Python FastF1.">
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="index.html" class="back-link">← Retour au portfolio</a>
+    <div class="topbar-tag">Projet scolaire · E5 · Data</div>
+  </div>
+
+  <div class="slideshow">
+
+    <section class="slide active" data-index="0">
+      <div class="slide-inner">
+        <div class="slide-number">01 · Introduction</div>
+        <h1 class="slide-title">Analyse de données <span>Formule 1</span> avec FastF1</h1>
+        <div class="img-placeholder">
+           <img src="img/LOGO_fastF1.jpg" alt="Logo FastF1">
+        </div>
+        <div class="slide-text">
+          <p>
+            Ce projet présente l'exploitation des données officielles de Formule 1 grâce à la bibliothèque Python <strong>FastF1</strong>.
+            Il combine ma passion pour la F1 et mon intérêt pour le développement informatique et la data, et montre concrètement
+            comment les données de course peuvent être récupérées, traitées et visualisées grâce à la programmation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-index="1">
+      <div class="slide-inner">
+        <div class="slide-number">02 · Contexte</div>
+        <h2 class="slide-title">Pourquoi ce projet ?</h2>
+        <div class="img-placeholder">
+          <img src="img/logo_F1.webp" alt="">
+        </div>
+        <div class="slide-text">
+          <p>
+            La Formule 1 est aujourd'hui un sport très dépendant de la <strong>data</strong> : les écuries analysent en permanence
+            les performances des voitures, l'usure des pneus et les stratégies de course pour optimiser chaque décision,
+            parfois en quelques secondes seulement.
+          </p>
+          <p>
+            Ce projet me permet donc de faire le lien entre un domaine qui me passionne et les compétences développées en
+            <strong>BTS SIO option SLAM</strong> : récupération de données via une API, traitement avec Python, et visualisation des résultats.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-index="2">
+      <div class="slide-inner">
+        <div class="slide-number">03 · Outil</div>
+        <h2 class="slide-title">Qu'est-ce que FastF1 ?</h2>
+        <div class="img-placeholder">
+         <img src="img/Graphique_tour_ver_et_ham.jpg" alt="graphique">
+        </div>
+        <div class="slide-text">
+          <p><strong>FastF1</strong> est une bibliothèque Python qui permet d'accéder aux données officielles de la Formule 1.</p>
+        </div>
+        <ul class="slide-list">
+          <li>les temps au tour de chaque pilote</li>
+          <li>les positions sur la piste tout au long de la course</li>
+          <li>les stratégies de course (arrêts aux stands, choix de pneus)</li>
+          <li>la télémétrie des voitures (vitesse, régime moteur, freinage…)</li>
+        </ul>
+        <div class="slide-text">
+          <p>Ces données brutes deviennent ensuite la matière première de l'analyse de données.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-index="3">
+      <div class="slide-inner">
+        <div class="slide-number">04 · Architecture</div>
+        <h2 class="slide-title">Comment ça fonctionne ?</h2>
+        <div class="img-placeholder small">
+          <img src="img/Tester API.webp" alt="API">
+        </div>
+        <div class="flow">
+          <div class="flow-step"><span>Étape 1</span>API officielle F1</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><span>Étape 2</span>FastF1 (Python)</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><span>Étape 3</span>DataFrames (Pandas)</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><span>Étape 4</span>Analyse &amp; graphiques</div>
+        </div>
+        <div class="slide-text">
+          <p>
+            Les données sont d'abord récupérées via une API, puis traitées en Python grâce à FastF1. Elles sont ensuite
+            transformées en <strong>DataFrames</strong> avec la bibliothèque <strong>Pandas</strong>, ce qui permet de les
+            analyser facilement et de créer des graphiques.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-index="4">
+      <div class="slide-inner">
+        <div class="slide-number">05 · Pratique</div>
+        <h2 class="slide-title">Exemple de code</h2>
+        <div class="slide-text">
+          <p>
+            Ce code génère 3 graphiques superposés pour comparer la <strong>vitesse</strong>,
+            les <strong>freinages</strong> et les <strong>accélérations</strong>
+            de Verstappen vs Leclerc au GP de Bahreïn 2023.
+          </p>
+        </div>
+        <div class="slide-img-row">
+          <div class="slide-img-code">
+            <img src="img/code_f1.png" alt="Code Python FastF1">
+          </div>
+          <div class="slide-img-graph">
+            <img src="img/graphique_f1.png" alt="Graphique télémétrie Verstappen vs Leclerc">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-results" data-index="5">
+      <div class="slide-inner slide-inner-results">
+        <div class="slide-number">06 · Résultats</div>
+        <h2 class="slide-title">Applications possibles</h2>
+        <div class="img-row-big">
+          <div class="img-big"><img src="img/tableu_de_bord.webp" alt="tableau de bord"></div>
+          <div class="img-big"><img src="img/strategie_pneu.jpg" alt="strategie_pneu"></div>
+          <div class="img-big"><img src="img/Lec_vs_Nor.png" alt="Leclerc vs norris monaco 2025"></div>
+        </div>
+        <ul class="slide-list slide-list-inline">
+          <li>comparer les performances des pilotes</li>
+          <li>analyser les stratégies de course</li>
+          <li>créer des tableaux de bord</li>
+          <li>visualiser des données</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide" data-index="6">
+      <div class="slide-inner">
+        <div class="slide-number">07 · Compétences</div>
+        <h2 class="slide-title">Lien avec le BTS SIO SLAM</h2>
+        <div class="img-placeholder">
+          <img src="img/Bts-SIO-scaled.jpg" alt="BTS SIO">
+        </div>
+        <div class="slide-text">
+          <p>Ce projet est directement lié à ma formation en <strong>BTS SIO option SLAM</strong> et mobilise plusieurs compétences concrètes, utilisées en entreprise :</p>
+        </div>
+        <ul class="slide-list">
+          <li>l'utilisation et l'exploitation d'une API</li>
+          <li>la programmation en Python</li>
+          <li>la manipulation et la structuration de données</li>
+          <li>la création de visualisations de données</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide" data-index="7">
+      <div class="slide-inner">
+        <div class="slide-number">08 · Bilan</div>
+        <h2 class="slide-title">Conclusion</h2>
+        <div class="img-placeholder">
+          <img src="img/generated-image (1).png" alt="BTS SIO">
+        </div>
+        <div class="conclusion-box">
+          <p>Ce projet m'a permis de découvrir comment la data est utilisée dans un sport de haut niveau comme la Formule 1, où chaque décision s'appuie sur l'analyse de données en temps réel.</p>
+          <p>J'ai également appris à exploiter des données via une API et à les analyser avec Python et Pandas.</p>
+          <p>Ce projet représente donc une bonne introduction à l'analyse de données et au développement orienté data — une base que je compte approfondir tout au long de mon BTS.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="nav-arrow nav-prev" id="prevBtn">&#8592;</div>
+  <div class="nav-arrow nav-next" id="nextBtn">&#8594;</div>
+
+  <div class="dots" id="dots"></div>
+  <div class="progress" id="progress"><span>1</span> / 8</div>
+  <div class="hint">Luis <strong>D.</strong> Sousa</div>
+
+  <style>
+    :root {
+      --petronas: #00403a96;
+      --petronas-mid: #00544c94;
+      --petronas-accent: #00A99D;
+      --bg: #020a09;
+      --bg2: #041210;
+      --bg3: #071a17;
+      --border: rgba(0,169,157,0.12);
+      --text: #f0f0f0;
+      --muted: #6a8a87;
+      --mono: 'DM Mono', monospace;
+      --sans: 'Outfit', sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+   
+    body {
+      background:
+        radial-gradient(ellipse 120% 100% at 0% 100%, var(--petronas) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 70% at 100% 0%, var(--petronas-mid) 0%, transparent 45%),
+        #000000;
+    }
+
+    
+    .topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: linear-gradient(to bottom, rgba(2,10,9,0.92), transparent);
+      pointer-events: none;
+    }
+    .topbar a { pointer-events: auto; }
+    .back-link {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--petronas-accent); }
+    .topbar-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--petronas-accent);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 60px 55px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(24px);
+      transition: opacity .5s ease, transform .5s ease, visibility .5s;
+      overflow: hidden;
+    }
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .slide-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .slide-number {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--petronas-accent);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .slide-title {
+      font-size: clamp(30px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .slide-title span { color: var(--petronas-accent); }
+
+    .slide-text p {
+      font-size: 17px;
+      color: #b0cac8;
+      line-height: 1.85;
+      margin: 0 auto 12px;
+      max-width: 740px;
+    }
+    .slide-text strong { color: var(--petronas-accent); font-weight: 600; }
+
+    .slide-list {
+      list-style: none;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 9px;
+      margin: 6px auto 12px;
+      text-align: left;
+    }
+    .slide-list li {
+      font-size: 16px;
+      color: #9abab8;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .slide-list li::before {
+      content: '→';
+      color: var(--petronas-accent);
+      flex-shrink: 0;
+      font-family: var(--mono);
+    }
+
+    
+    .img-placeholder {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 16px auto 20px;
+    }
+    .img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+    .img-placeholder.small { max-width: 460px; aspect-ratio: 16/8; }
+
+    .slide-img-row {
+      display: flex;
+      gap: 16px;
+      align-items: stretch;
+      width: 100%;
+      max-width: 900px;
+      height: 340px;
+      margin: 12px auto 0;
+    }
+    .slide-img-code {
+      flex: 0 0 38%;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .slide-img-graph {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .slide-img-code img,
+    .slide-img-graph img { width: 100%; height: 100%; object-fit: cover; }
+
+    
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 700px;
+      margin: 6px auto 22px;
+    }
+    .flow-step {
+      border: 1px solid var(--border);
+      background: rgba(0,64,58,0.3);
+      padding: 14px 16px;
+      font-size: 12.5px;
+      color: var(--text);
+      flex: 1 1 130px;
+    }
+    .flow-step span {
+      display: block;
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--petronas-accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .flow-arrow {
+      color: var(--petronas-accent);
+      font-family: var(--mono);
+      font-size: 16px;
+      flex: 0 0 auto;
+    }
+
+    .conclusion-box {
+      border: 1px solid rgba(0,169,157,0.25);
+      background: rgba(0,64,58,0.25);
+      padding: 24px 30px;
+      max-width: 680px;
+      text-align: left;
+      margin-bottom: 18px;
+    }
+    .conclusion-box p {
+      font-size: 14.5px;
+      color: #c8e8e5;
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+    .conclusion-box p:last-child { margin-bottom: 0; }
+
+    
+    .slide-inner-results {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 1100px;
+    }
+    .slide-inner-results .slide-title { margin-bottom: 14px; }
+
+    .img-row-big {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      width: 100%;
+      max-width: 1050px;
+      height: 320px;
+      margin: 0 auto;
+    }
+    .img-big {
+      flex: 1;
+      min-width: 0;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .img-big img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide-list-inline {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 32px;
+      margin: 14px auto 0;
+    }
+    .slide-list-inline li { font-size: 14px; }
+
+    
+    .nav-arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 50;
+      width: 46px; height: 46px;
+      border: 1px solid var(--border);
+      background: rgba(2,10,9,0.75);
+      color: var(--petronas-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 20px;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+      user-select: none;
+    }
+    .nav-arrow:hover { border-color: var(--petronas-accent); color: #fff; }
+    .nav-prev { left: 24px; }
+    .nav-next { right: 24px; }
+    .nav-arrow.disabled { opacity: .25; pointer-events: none; }
+
+    .dots {
+      position: fixed;
+      bottom: 24px;
+      left: 0; right: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,169,157,0.3);
+      background: transparent;
+      cursor: pointer;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+    .dot.active {
+      background: var(--petronas-accent);
+      border-color: var(--petronas-accent);
+      transform: scale(1.25);
+    }
+
+    .progress {
+      position: fixed;
+      bottom: 24px;
+      right: 40px;
+      z-index: 50;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+    .progress span { color: var(--petronas-accent); }
+
+    .hint {
+      position: fixed;
+      bottom: 24px;
+      left: 40px;
+      z-index: 50;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: none;
+    }
+    .hint strong { color: var(--petronas-accent); }
+
+    @media (min-width: 700px) { .hint { display: block; } }
+
+    @media (max-width: 700px) {
+      .slide { padding: 90px 24px 80px; }
+      .nav-arrow { width: 38px; height: 38px; font-size: 16px; }
+      .nav-prev { left: 10px; }
+      .nav-next { right: 10px; }
+      .hint, .progress { display: none; }
+    }
+  </style>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dots');
+    const progress = document.getElementById('progress');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let current = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = document.querySelectorAll('.dot');
+
+    function update() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === current));
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      progress.querySelector('span').textContent = current + 1;
+      prevBtn.classList.toggle('disabled', current === 0);
+      nextBtn.classList.toggle('disabled', current === slides.length - 1);
+    }
+
+    function goTo(i) {
+      if (i < 0 || i >= slides.length) return;
+      current = i;
+      update();
+    }
+    function prev() { goTo(current - 1); }
+    function next() { goTo(current + 1); }
+
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); next(); }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); prev(); }
+    });
+
+    let touchStartX = 0;
+    document.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
+    document.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (dx > 50) prev();
+      if (dx < -50) next();
+    });
+
+    update();
+  </script>
+
+</body>
+</html>
